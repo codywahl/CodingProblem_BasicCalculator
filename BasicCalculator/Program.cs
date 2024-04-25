@@ -8,7 +8,7 @@ namespace BasicCalculator
         public static void Main(string[] args)
         {
             Solution mySolution = new Solution();
-            Console.WriteLine(mySolution.calculate("1 + 1"));
+            Console.WriteLine(mySolution.calculate("(12 + 1) - (1)"));
         }
     }
 
@@ -25,24 +25,42 @@ namespace BasicCalculator
                 index++;
 
                 if(currentChar == ' '){
-                    // don't change the opperand's current value
+                    // don't change the opperand's current value when there is a blank space, and move to the next character
                 }
-                else if(Char.IsDigit(currentChar)){
-                    opperand = currentChar - '0';
+                else if(char.IsDigit(currentChar)){
+                    int currentCharValue = (int)char.GetNumericValue(currentChar);
+
+                    // account for a number being more than a single digit
+                    if(opperand > 0){
+                        opperand = 10 * opperand + currentCharValue;
+                    }
+                    // account for single digit numbers
+                    else{
+                        opperand = currentCharValue;
+                    }
                 }
                 else if(currentChar == '('){
-                    // do later -- recursive call
+                    opperand = calculate(inputStr);
                 }
                 else if(currentChar == ')'){
                     break;                    
                 }
-                else if(currentChar == '+' || currentChar == '-'){
-
+                else if(currentChar == '+'){
+                    currentTotal += unaryOperator * opperand;
+                    unaryOperator = 1;
+                    opperand = 0;
+                }
+                else if(currentChar == '-'){
+                    currentTotal += unaryOperator * opperand;
+                    unaryOperator = -1;
+                    opperand = 0;
                 }
                 else{
                     throw new Exception("The character encountered was invalid.");
                 }
             }
+
+            return currentTotal += unaryOperator * opperand;
         }
     }
 }

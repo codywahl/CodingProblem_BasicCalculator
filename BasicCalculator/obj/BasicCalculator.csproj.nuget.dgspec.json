@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj": {}
+    "e:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj": {}
   },
   "projects": {
-    "E:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj": {
+    "e:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj",
+        "projectUniqueName": "e:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj",
         "projectName": "BasicCalculator",
-        "projectPath": "E:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj",
+        "projectPath": "e:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\BasicCalculator.csproj",
         "packagesPath": "C:\\Users\\Cody Wahl\\.nuget\\packages\\",
-        "outputPath": "E:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\obj\\",
+        "outputPath": "e:\\Coding\\GitHub\\CodingProblem_BasicCalculator\\BasicCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
