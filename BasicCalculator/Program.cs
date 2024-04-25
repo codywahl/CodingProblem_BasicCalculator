@@ -13,24 +13,36 @@ namespace BasicCalculator
     }
 
     public class Solution {
-        private int currentIndex = 0;
+        private int index = 0;
 
         public int calculate(String inputStr){
             int currentTotal = 0;
+            int opperand = 0;
+            int unaryOperator = 1;
             
-            while(currentIndex < inputStr.Length){
-                char currentCharacter = inputStr[currentIndex];
+            while(index < inputStr.Length){
+                char currentChar = inputStr[index];
+                index++;
 
-                if(Char.IsDigit(currentCharacter)){
-                    currentTotal += currentCharacter;
+                if(currentChar == ' '){
+                    // don't change the opperand's current value
                 }
-                if(inputStr[currentIndex] == ')'){
-                    return currentTotal;
+                else if(Char.IsDigit(currentChar)){
+                    opperand = currentChar - '0';
+                }
+                else if(currentChar == '('){
+                    // do later -- recursive call
+                }
+                else if(currentChar == ')'){
+                    break;                    
+                }
+                else if(currentChar == '+' || currentChar == '-'){
+
+                }
+                else{
+                    throw new Exception("The character encountered was invalid.");
                 }
             }
-
-            currentIndex++; 
-            return 0;
         }
     }
 }
